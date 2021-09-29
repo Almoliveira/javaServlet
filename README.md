@@ -1,2 +1,3 @@
 # javaServlet
-Baseado na Aula "Java Servlet: Fundamento de Programação para web java"
+Finalizada a Aula "Java Servlet: Fundamento de Programação para web java"
+Agora na parte 2: Java Servlet: Autenticação, autorização e o padrão MVC.
