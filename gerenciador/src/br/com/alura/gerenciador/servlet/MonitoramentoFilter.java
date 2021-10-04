@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns="/entrada")
+//@WebFilter(urlPatterns="/entrada")
 public class MonitoramentoFilter implements Filter {
 
 	@Override
@@ -17,15 +17,17 @@ public class MonitoramentoFilter implements Filter {
 			throws IOException, ServletException {
 		
 		System.out.println("MonitoramentoFilter");
+		
+		
 		long antes = System.currentTimeMillis();
 		
 		String acao = request.getParameter("acao");
 		
-		//Executa a ação
+		//executa a acao
 		chain.doFilter(request, response);
 		
 		long depois = System.currentTimeMillis();
-		System.out.println("Tempo de execução da ação "+ acao + " -> " +  (depois - antes));
+		System.out.println("Tempo de execução da acao " + acao + " -> " + (depois - antes));
 		
 	}
 
